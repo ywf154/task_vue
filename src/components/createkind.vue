@@ -30,7 +30,7 @@ export default {
     return {
       createkindDialogVisible: false,
       newkindData: {
-        plateId: this.plateId,
+        plateId: this.plate.id,
         name: '',
         douser: '',
       },
@@ -40,12 +40,11 @@ export default {
   methods: {
     showCreatekindDialog() {
       this.createkindDialogVisible = true;
-      this.fetchplates(); // 获取 plate 数据
     },
     createNewkind() {
       this.createkindDialogVisible = false;
       this.createkind(this.newkindData);
-      this.newkindData = { name: '', douser: '', plateId: this.plateId }
+      this.newkindData = { name: '', douser: '', plateId: this.plate.id }
     },
     createkind(kindData) {
       addKindService(kindData).then(response => {

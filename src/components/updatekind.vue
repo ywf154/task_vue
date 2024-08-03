@@ -17,7 +17,7 @@
 </template>
   
 <script>
-import { deleteKindService } from '@/api/kind'
+import { updateKindService } from '@/api/kind'
 export default {
   props: ['row'],
   data() {
@@ -38,8 +38,6 @@ export default {
       updateKindService(this.editForm).then(() => {
         this.$message.success('更新成功');
         this.editModalVisible = false;
-        // 更新 kinds 数据源
-        this.fetchkinds();
       }).catch((error) => {
         this.$message.error('更新失败: ' + error.message);
       });
