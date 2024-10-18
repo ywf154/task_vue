@@ -1,9 +1,9 @@
 import axios from 'axios'
 import {ElMessage} from 'element-plus'// 假设使用了 Element UI 组件库
-
+import {config} from '@/../config'
 // 创建 Axios 实例
 const service = axios.create({
-baseURL: 'http://localhost:8080',// 修改为正确的 URL
+baseURL: config.serverUrl,// 修改为正确的 URL
   timeout: 5000 // 请求超时时间
 })
 
