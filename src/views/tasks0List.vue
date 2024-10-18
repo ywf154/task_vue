@@ -156,8 +156,6 @@ export default {
 .el-table tr:hover {
   background-color: #ebe308;
   color: #bc0c0c;
-  border-bottom: 1px solid #230606;
-  font-size: 25px;
 }
 
 
